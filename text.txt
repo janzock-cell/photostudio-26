@@ -1,0 +1,30 @@
+photoStudioGo/
+├── netlify/
+│   └── functions/
+│       └── gemini.js           ← API sicher
+├── src/
+│   ├── components/
+│   │   ├── ImageUploader.tsx
+│   │   ├── ResultDisplay.tsx
+│   │   ├── ZoomModal.tsx
+│   │   ├── MakeupPanel.tsx
+│   │   ├── AdjustmentPanel.tsx
+│   │   ├── PresetLibrary.tsx   ← NEU (scrollbar)
+│   │   ├── LivePreview.tsx     ← NEU (CSS-Filter)
+│   │   └── Spinner.tsx
+│   ├── services/
+│   │   └── geminiService.ts
+│   ├── utils/
+│   │   └── imageUtils.ts
+│   ├── presets/
+│   │   └── prompts.ts          ← Gute Prompts!
+│   ├── types.ts
+│   ├── App.tsx
+│   ├── index.tsx
+│   └── index.css
+├── index.html
+├── netlify.toml
+├── package.json
+├── tailwind.config.js
+├── vite.config.ts
+└── tsconfig.json
