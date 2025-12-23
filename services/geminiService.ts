@@ -68,7 +68,7 @@ export const analyzeImage = async (imageInput: File | string, prompt: string): P
 };
 
 export const editImage = async (imageInput: File | string, prompt: string): Promise<string> => {
-  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || '' });
+  const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_GEMINI_API_KEY || '' });
   const imagePart = await getInputPart(imageInput);
 
   const anatomyLock = `
