@@ -1,6 +1,6 @@
 import { GoogleGenAI, Modality, HarmCategory, HarmBlockThreshold } from "@google/genai";
 
-// Bildoptimierung: PNG ist stabiler für die API als JPEG (keine Artefakte)
+// Bildoptimierung: PNG ist stabiler fÃ¼r die API als JPEG (keine Artefakte)
 const optimizeImage = async (file: File | string, maxWidth = 1024, maxHeight = 1024): Promise<{ data: string; mimeType: string }> => {
   return new Promise((resolve, reject) => {
     const img = new Image();
@@ -93,6 +93,6 @@ export const editImage = async (imageInput: File | string, prompt: string): Prom
   });
 
   const part = response.candidates?.[0]?.content?.parts.find(p => p.inlineData);
-  if (!part?.inlineData) throw new Error("Kein Bild generiert. Möglicherweise wurde die Anfrage blockiert.");
+  if (!part?.inlineData) throw new Error("Kein Bild generiert. MÃ¶glicherweise wurde die Anfrage blockiert.");
   return `data:${part.inlineData.mimeType};base64,${part.inlineData.data}`;
 };
